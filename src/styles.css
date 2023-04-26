@@ -1,4 +1,62 @@
-body {
-    color: black;
-    background-color: lemonchiffon;
-  }
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Comic Neue', cursive;
+}
+
+.title {
+  margin: 2% 1%;
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin: 0 4%;
+  font-size: 1.5rem;
+}
+
+.subtitle-container {
+  display: flex;
+}
+
+.refresh-btn {
+  cursor: pointer;
+  padding-inline: 2%;
+}
+
+.namescore {
+  box-sizing: border-box;
+  margin: 2% 4%;
+  border: 2px solid black;
+  list-style: none;
+}
+
+li:nth-child(odd) {
+  background-color: #e9d7fa;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+.recent-cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 4%;
+}
+
+.input-value {
+  margin-bottom: 6%;
+}
+
+.submit-btn {
+  margin-top: 10%;
+  width: 35%;
+  cursor: pointer;
+}
