@@ -19,25 +19,28 @@
         <button class="refresh-btn">Refresh</button>
         </div>
         <div class="score-table-container">
-            <!--add scores dinamically-->
-            <ul class="namescore">
-                <!-- <li>Name: 100</li>
+            <ul class="hard-list" id="scores">
+         <!--add scores dinamically-->
+            </ul>
+            <!-- <ul class="hard-list" id="scores">
+                <li>Name: 100</li>
                 <li>Name: 20</li>
                 <li>Name: 50</li>
                 <li>Name: 78</li>
                 <li>Name: 125</li>
                  <li>Name: 77</li>
-                <li>Name: 42</li> -->
-            </ul>
+                <li>Name: 42</li>
+            </ul> -->
         </div>
     </div>
+    <!---Add form-->
         <div class="form-container">
         <h2 class="form-title">Add your score</h2>
-        <form action="" method="post">
-        <input class="input-value" type="text" name="" id="name" placeholder="Your Name">
-        <input class="input-value" type="number" placeholder="Your score">   
-    </form>
-    <button type="submit" class="submit-btn">Submit</button>
+        <form class="input-form">
+            <input id="name-input" type="text" name="name" placeholder="Your name" required>
+            <input id="score-input" type="text" name="score" placeholder="Your Score" required>
+            <button type="submit" class="submit-btn btn">Submit</button>
+          </form>
     </div>
     </div>
 

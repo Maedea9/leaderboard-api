@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Comic Neue', cursive;
+  list-style: none;
 }
 
 .title {
@@ -24,12 +25,31 @@ h2 {
   padding-inline: 2%;
 }
 
-.namescore {
+.hard-list {
   box-sizing: border-box;
   margin: 2% 4%;
   border: 2px solid black;
   list-style: none;
 }
+
+.score-item > li {
+  box-sizing: border-box;
+  margin: 5% 4%;
+  border: 2px solid black;
+  list-style: none;
+}
+
+/* .book-infocss {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  background-color: #fff;
+  align-self: center;
+  box-sizing: border-box;
+  margin: 2% 4%;
+  border: 2px solid black;
+  list-style: none;
+} */
 
 li:nth-child(odd) {
   background-color: #e9d7fa;
@@ -40,18 +60,21 @@ li:nth-child(odd) {
   flex-direction: row;
   width: 50%;
 }
+
 .recent-cont {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+
 .form-container {
   display: flex;
   flex-direction: column;
   margin: 2% 4%;
 }
 
-.input-value {
+.input-value-name,
+.input-value-score {
   margin-bottom: 6%;
 }
 
