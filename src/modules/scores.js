@@ -44,21 +44,21 @@ displayScore = () => {
   /* Add a new Score */
   addScore=({ name, scoreNum }) => {
     const newScore = {
-        id: this.scoreData.length + 1,
-        name,
-        score: scoreNum,
-      };
-      this.scoreData.push(newScore);
-      this.saveScore(newScore);
-      this.displayScore();
-    }
- //saves score to localStorage//
-    saveScore = (score) => {
-        const scores = JSON.parse(localStorage.getItem('scores')) || [];
-        scores.push(score);
-        localStorage.setItem('scores', JSON.stringify(scores));
-      }
-    }
+      id: this.scoreData.length + 1,
+      name,
+      score: scoreNum,
+    };
+    this.scoreData.push(newScore);
+    this.saveScore(newScore);
+    this.displayScore();
+  }
 
+  // saves score to localStorage//
+    saveScore = (score) => {
+      const scores = JSON.parse(localStorage.getItem('scores')) || [];
+      scores.push(score);
+      localStorage.setItem('scores', JSON.stringify(scores));
+    }
+}
 
 export default Score;

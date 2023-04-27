@@ -1,4 +1,3 @@
-
 import './styles.css';
 import Score from './modules/scores.js';
 
