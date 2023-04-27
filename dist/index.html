@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Leaderboard</title>
 <script defer src="main.js"></script></head>
 <body>
-    <h1>Hello World!</h1>
+    <h1 class="title">Leaderboard</h1>
+    <div class="main-container">
+        <div class="recent-cont">
+        <div class="subtitle-container">
+        <h2 class="score-title">Recent Scores</h2>
+        <button class="refresh-btn">Refresh</button>
+        </div>
+        <div class="score-table-container">
+            <ul class="hard-list" id="scores">
+         <!--add scores dinamically-->
+            </ul>
+            <!-- <ul class="hard-list" id="scores">
+                <li>Name: 100</li>
+                <li>Name: 20</li>
+                <li>Name: 50</li>
+                <li>Name: 78</li>
+                <li>Name: 125</li>
+                 <li>Name: 77</li>
+                <li>Name: 42</li>
+            </ul> -->
+        </div>
+    </div>
+    <!---Add form-->
+        <div class="form-container">
+        <h2 class="form-title">Add your score</h2>
+        <form class="input-form">
+            <input id="name-input" type="text" name="name" placeholder="Your name" required>
+            <input id="score-input" type="text" name="score" placeholder="Your Score" required>
+            <button type="submit" class="submit-btn btn">Submit</button>
+          </form>
+    </div>
+    </div>
+
+    <!-- <script src="index.js" type="module"></script> -->
 </body>
 </html>
