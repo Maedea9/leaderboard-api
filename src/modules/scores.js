@@ -1,64 +1,55 @@
 // creating a class Score//
 class Score {
-  constructor(name, score, id) {
-    this.name = name;
+  constructor(user, score) {
+    this.user = user;
     this.score = score;
-    this.id = id;
   }
 
-    // hardList//
-    scoreData = JSON.parse(localStorage.getItem('scores')) || [
-      {
-        name: 'X',
-        score: 100,
-        id: 1,
-      },
-      {
-        name: 'Y',
-        score: 150,
-        id: 2,
-      },
-      {
-        name: 'Z',
-        score: 300,
-        id: 3,
-      },
-      {
-        name: 'A',
-        score: 500,
-        id: 4,
-      },
-      {
-        name: 'B',
-        score: 10,
-        id: 5,
-      },
-    ]
+  // empty array for API data
+apiData = [];
+
+// api url with unique id
+apiId = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a0PqUQ9ych94KMvwDjJn/scores/';
 
 // displaying scores//
 displayScore = () => {
-  const scoresContainer = document.getElementById('scores');
-  scoresContainer.innerHTML = this.scoreData.map((element) => `<li class="score-item"}>${element.name} : ${element.score}</li>`).join('');
+  const scoresCont = document.getElementById('scores');
+  scoresCont.innerHTML = this.apiData.map((element) => `<li class="score-item"}>${element.user} : ${element.score}</li>`).join('');
 }
 
-  /* Add a new Score */
-  addScore=({ name, scoreNum }) => {
-    const newScore = {
-      id: this.scoreData.length + 1,
-      name,
-      score: scoreNum,
-    };
-    this.scoreData.push(newScore);
-    this.saveScore(newScore);
-    this.displayScore();
+// get data from the api
+getData = async () => {
+  try {
+    const data = await fetch(this.apiId);
+    const response = await data.json();
+    this.apiData = [];
+    response.result.map((element) => this.apiData.push(element));
+    return this.displayScore();
+  } catch (error) {
+    return error;
   }
+};
 
-  // saves score to localStorage//
-    saveScore = (score) => {
-      const scores = JSON.parse(localStorage.getItem('scores')) || [];
-      scores.push(score);
-      localStorage.setItem('scores', JSON.stringify(scores));
-    }
+// add new score to the api
+addScore = async ({ user, scoreNumber }) => {
+  try {
+    const params = {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ user, score: scoreNumber }),
+    };
+
+    const data = await fetch(this.apiId, params);
+    const response = await data.json();
+    this.apiData.push(response);
+    return this.getData();
+  } catch (error) {
+    return error;
+  }
+};
 }
 
 export default Score;
