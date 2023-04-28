@@ -5,7 +5,7 @@ class Score {
     this.score = score;
   }
 
-  // empty array for API datas
+  // empty array for API data
 apiData = [];
 
 // api url with unique id
@@ -13,8 +13,8 @@ apiId = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a0
 
 // displaying scores//
 displayScore = () => {
-  const scoresContainer = document.getElementById('scores');
-  scoresContainer.innerHTML = this.apiData.map((element) => `<li class="score-item"}>${element.user} : ${element.score}</li>`).join('');
+  const scoresCont = document.getElementById('scores');
+  scoresCont.innerHTML = this.apiData.map((element) => `<li class="score-item"}>${element.user} : ${element.score}</li>`).join('');
 }
 
 // get data from the api
@@ -30,10 +30,10 @@ getData = async () => {
   }
 };
 
-//add new score to the api
+// add new score to the api
 addScore = async ({ user, scoreNumber }) => {
   try {
-    const config = {
+    const params = {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -42,7 +42,7 @@ addScore = async ({ user, scoreNumber }) => {
       body: JSON.stringify({ user, score: scoreNumber }),
     };
 
-    const data = await fetch(this.apiId, config);
+    const data = await fetch(this.apiId, params);
     const response = await data.json();
     this.apiData.push(response);
     return this.getData();
