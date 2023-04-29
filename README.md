@@ -4,9 +4,6 @@
 
 <div align="center">
 
-  <h2><b>ToDo List</b></h2>
-   <h3><b>Readme</b></h3>
-
 </div>
 
 </div>
@@ -52,7 +49,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-> An exercise to create simple To-Do list using Webpack!
+> An exercise to create simple LeaderBoard using APIs!
 
 - **[Webpack]**
 - **[JavaScript ES6 Syntax]**
@@ -117,7 +114,7 @@ GitHub pages.
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Adding more style** : Adding styles.
-- **Woeking with APIs** : Working with an API.
+- **Working with APIs** : Working with an API.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
