@@ -1,13 +1,34 @@
+@font-face {
+  font-family: "Final_Fantasy_VII";
+  src: url(./font/Final_Fantasy_VII.ttf) format("truetype");
+}
+
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Comic Neue', cursive;
+ /* stylelint-disable */
+ font-family: "Final_Fantasy_VII";
+ /* stylelint-enable */
   list-style: none;
+  font-size: 2.3vw;
+}
+
+body {
+  background: url('./images/pngegg2.png') top right no-repeat;
+  background-size: 50%;
+  background-color: rgb(29, 27, 27);
 }
 
 .title {
   margin: 2% 1%;
   font-size: 2.5rem;
+  color: white;
+}
+
+.score-title,
+.form-title {
+  margin: 0 5%;
+  color: white;
 }
 
 h2 {
@@ -26,9 +47,13 @@ h2 {
 
 .hard-list {
   box-sizing: border-box;
-  margin: 2% 4%;
-  border: 2px solid black;
-  list-style: none;
+  margin: 2% 2%;
+  border: 2px solid white;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 3%;
+  background-image: linear-gradient(blue, rgb(28, 28, 109));
+  color: white;
 }
 
 .score-item > li {
@@ -50,9 +75,9 @@ h2 {
   list-style: none;
 } */
 
-li:nth-child(odd) {
+/* li:nth-child(odd) {
   background-color: #e9d7fa;
-}
+} */
 
 .main-container {
   display: flex;
