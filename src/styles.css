@@ -1,58 +1,91 @@
+@font-face {
+  font-family: "Final_Fantasy_VII";
+  src: url(./font/Final_Fantasy_VII.ttf) format("truetype");
+}
+
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Comic Neue', cursive;
+  font-family: "Final_Fantasy_VII";
   list-style: none;
 }
 
-.title {
-  margin: 2% 1%;
-  font-size: 2.5rem;
+body {
+  background: url('./images/pngegg2.png') top right no-repeat;
+  background-size: 50%;
+  background-color: rgb(29, 27, 27);
 }
 
-h2 {
-  margin: 0 4%;
-  font-size: 1.5rem;
+/* .title,
+.score-title,
+.form-title {
+  font-family: "Final_Fantasy_VII";
+} */
+
+.title {
+  margin: 2% 1%;
+  font-size: 4.5rem;
+  color: white;
+}
+
+.score-title,
+.form-title {
+  margin: 0 5%;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.score-title {
+  padding-top: 8%;
+}
+
+.form-title {
+  padding-top: 10%;
+  margin-bottom: 5%;
 }
 
 .subtitle-container {
   display: flex;
+  align-items: center;
 }
 
-.refresh-btn {
+.refresh-btn,
+.submit-btn {
   cursor: pointer;
-  padding-inline: 2%;
+  padding-inline: 5%;
+  font-size: 2rem;
+  padding-top: 6%;
+}
+
+.submit-btn {
+  padding-top: 12%;
+  margin-top: 10%;
 }
 
 .hard-list {
   box-sizing: border-box;
-  margin: 2% 4%;
-  border: 2px solid black;
-  list-style: none;
+  margin: 2% 2%;
+  border: 2px solid white;
+  border-radius: 4px;
+  font-size: 2rem;
+  padding: 3%;
+  background-image: linear-gradient(blue, rgb(28, 28, 109));
+  color: white;
 }
 
 .score-item > li {
   box-sizing: border-box;
-  margin: 5% 4%;
+
+  /* margin: 5% 4%; */
   border: 2px solid black;
   list-style: none;
+
+  /* padding-top: 6%; */
 }
 
-/* .book-infocss {
-  display: flex;
-  width: 75%;
-  justify-content: space-between;
-  background-color: #fff;
-  align-self: center;
-  box-sizing: border-box;
-  margin: 2% 4%;
-  border: 2px solid black;
-  list-style: none;
-} */
-
-li:nth-child(odd) {
+/* li:nth-child(odd) {
   background-color: #e9d7fa;
-}
+} */
 
 .main-container {
   display: flex;
@@ -70,15 +103,14 @@ li:nth-child(odd) {
   display: flex;
   flex-direction: column;
   margin: 2% 4%;
-}
-
-.input-value-name,
-.input-value-score {
-  margin-bottom: 6%;
-}
-
-.submit-btn {
-  margin-top: 10%;
   width: 35%;
-  cursor: pointer;
+}
+
+#name-input,
+#score-input {
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+  font-size: 2rem;
+  margin-bottom: 5%;
 }
