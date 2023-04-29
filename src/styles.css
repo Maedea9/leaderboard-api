@@ -51,17 +51,11 @@ body {
   align-items: center;
 }
 
-.refresh-btn,
-.submit-btn {
+.refresh-btn {
   cursor: pointer;
   padding-inline: 5%;
   font-size: 2rem;
   padding-top: 6%;
-}
-
-.submit-btn {
-  padding-top: 12%;
-  margin-top: 10%;
 }
 
 .hard-list {
@@ -77,11 +71,9 @@ body {
 
 .score-item > li {
   box-sizing: border-box;
-
   /* margin: 5% 4%; */
   border: 2px solid black;
   list-style: none;
-
   /* padding-top: 6%; */
 }
 
@@ -108,11 +100,20 @@ body {
   width: 35%;
 }
 
-#name-input,
-#score-input {
+.input-user,
+.input-score {
   display: flex;
   align-items: center;
   padding-top: 5%;
   font-size: 2rem;
   margin-bottom: 5%;
+}
+
+.submit-btn {
+  padding-top: 12%;
+  margin-top: 10%;
+  cursor: pointer;
+  padding-inline: 5%;
+  font-size: 2rem;
+  padding-top: 6%;
 }
