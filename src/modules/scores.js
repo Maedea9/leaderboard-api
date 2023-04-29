@@ -9,7 +9,7 @@ class Score {
 apiData = [];
 
 // api url with unique id
-apiId = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a0PqUQ9ych94KMvwDjJn/scores/';
+apiId = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/78E7clxMSw9I1dLBZwKv/scores/';
 
 // displaying scores//
 displayScore = () => {
