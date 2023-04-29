@@ -1,4 +1,4 @@
-// import './styles.css';
+import './styles.css';
 import Score from './modules/scores.js';
 
 const newScore = new Score();
