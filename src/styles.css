@@ -6,7 +6,9 @@
 * {
   padding: 0;
   margin: 0;
+ /* stylelint-disable */
   font-family: "Final_Fantasy_VII";
+  /* stylelint-enable */
   list-style: none;
 }
 
