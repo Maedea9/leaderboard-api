@@ -7,9 +7,10 @@
   padding: 0;
   margin: 0;
  /* stylelint-disable */
-  font-family: "Final_Fantasy_VII";
-  /* stylelint-enable */
+ font-family: "Final_Fantasy_VII";
+ /* stylelint-enable */
   list-style: none;
+  font-size: 2.3vw;
 }
 
 body {
@@ -18,44 +19,30 @@ body {
   background-color: rgb(29, 27, 27);
 }
 
-/* .title,
-.score-title,
-.form-title {
-  font-family: "Final_Fantasy_VII";
-} */
-
 .title {
   margin: 2% 1%;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   color: white;
 }
 
 .score-title,
 .form-title {
   margin: 0 5%;
-  font-size: 2.5rem;
   color: white;
 }
 
-.score-title {
-  padding-top: 8%;
-}
-
-.form-title {
-  padding-top: 10%;
-  margin-bottom: 5%;
+h2 {
+  margin: 0 4%;
+  font-size: 1.5rem;
 }
 
 .subtitle-container {
   display: flex;
-  align-items: center;
 }
 
 .refresh-btn {
   cursor: pointer;
-  padding-inline: 5%;
-  font-size: 2rem;
-  padding-top: 6%;
+  padding-inline: 2%;
 }
 
 .hard-list {
@@ -63,7 +50,7 @@ body {
   margin: 2% 2%;
   border: 2px solid white;
   border-radius: 4px;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 3%;
   background-image: linear-gradient(blue, rgb(28, 28, 109));
   color: white;
@@ -71,11 +58,22 @@ body {
 
 .score-item > li {
   box-sizing: border-box;
-  /* margin: 5% 4%; */
+  margin: 5% 4%;
   border: 2px solid black;
   list-style: none;
-  /* padding-top: 6%; */
 }
+
+/* .book-infocss {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  background-color: #fff;
+  align-self: center;
+  box-sizing: border-box;
+  margin: 2% 4%;
+  border: 2px solid black;
+  list-style: none;
+} */
 
 /* li:nth-child(odd) {
   background-color: #e9d7fa;
@@ -97,23 +95,15 @@ body {
   display: flex;
   flex-direction: column;
   margin: 2% 4%;
-  width: 35%;
 }
 
-.input-user,
-.input-score {
-  display: flex;
-  align-items: center;
-  padding-top: 5%;
-  font-size: 2rem;
-  margin-bottom: 5%;
+.input-value-name,
+.input-value-score {
+  margin-bottom: 6%;
 }
 
 .submit-btn {
-  padding-top: 12%;
   margin-top: 10%;
+  width: 35%;
   cursor: pointer;
-  padding-inline: 5%;
-  font-size: 2rem;
-  padding-top: 6%;
 }
